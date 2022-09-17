@@ -142,6 +142,7 @@ function ahorcado(){
 
     if(vidas==6){   
         cabeza.src = "imagenes/cabeza.png";
+        cabeza.alt = "Cabeza"
         cabeza.onload = function (){
             pincel.drawImage(cabeza,355,135,80,80);
         }
@@ -149,36 +150,42 @@ function ahorcado(){
 
     if(vidas==5){
         cuerpo.src = "imagenes/cuerpo.png"
+        cuerpo.alt = "Cuerpo"
         cuerpo.onload = function(){
             pincel.drawImage(cuerpo,390,214,7,100)
         }
     }
      
     if(vidas==4){
-        piernai.src = "imagenes/piernai.png"
-        piernai.onload = function(){
-            pincel.drawImage(piernai,345,312,50,50)
+        brazod.src = "imagenes/brazod.png"
+        brazod.alt = "brazo derecho"
+        brazod.onload = function(){
+            pincel.drawImage(brazod,392,230,50,50)
         }
     }
 
     if(vidas==3){
+        brazoi.src = "imagenes/brazoi.png"
+        brazoi.alt = "brazo izquierdo"
+        brazoi.onload = function(){
+            pincel.drawImage(brazoi,345,230,50,50)
+        }
+        
+    }
+
+    if(vidas==2){
         piernad.src = "imagenes/piernad.png"
+        piernad.alt = "pierna derecha"
         piernad.onload = function(){
             pincel.drawImage(piernad,392,312,50,50)
         }
     }
 
-    if(vidas==2){
-        brazoi.src = "imagenes/brazoi.png"
-        brazoi.onload = function(){
-            pincel.drawImage(brazoi,345,230,50,50)
-        }
-    }
-
     if(vidas==1){
-        brazod.src = "imagenes/brazod.png"
-        brazod.onload = function(){
-            pincel.drawImage(brazod,392,230,50,50)
+        piernai.src = "imagenes/piernai.png"
+        piernai.alt = "pierna izquierda"
+        piernai.onload = function(){
+            pincel.drawImage(piernai,345,312,50,50)
         }
         pincel.fillStyle="red";
         pincel.font="bold 72px Poppins";
