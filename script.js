@@ -11,7 +11,7 @@ var cont = 0;
 var vidas = 6;
 var win = 0;
 
-//Funciones de la iterfaz
+//Funciones de la interfaz
 function alerta(){ 
     play(); 
     document.getElementById("iniciar").style.display = "none";
@@ -56,6 +56,10 @@ function anhadir(){
 
 //Funciones del juego
 function play(){
+    var cont = 0;
+    var vidas = 6;
+    var win = 0;
+    letrasUsadas = [];
     randomword();
     ongame = true;
     let x = 500;
