@@ -244,9 +244,15 @@ function randomword(){
 }
 
 function addPalabra(x,y){
+    
     pincel.fillStyle = "darkblue"
     pincel.font="bold 48px Poppins"
-    pincel.fillText(x,520+(80*y),390)
+    if(palabraSecreta.length < 6){
+        pincel.fillText(x,520+(80*y),390)
+    }
+    if(palabraSecreta.length > 6){
+        pincel.fillText(x,520+(70*y),390)
+    }
 }
 
 function revisarletras(x){
