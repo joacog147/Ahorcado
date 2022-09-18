@@ -56,9 +56,9 @@ function anhadir(){
 
 //Funciones del juego
 function play(){
-    var cont = 0;
-    var vidas = 6;
-    var win = 0;
+    cont = 0;
+    vidas = 6;
+    win = 0;
     letrasUsadas = [];
     randomword();
     ongame = true;
@@ -119,7 +119,7 @@ function play(){
         pincel.fillRect(x+420,y,60,5);
     }
 
-    if(palabraSecreta.length == 8){
+    if(palabraSecreta.length == 8){ 
         pincel.fillStyle = "darkblue"
         pincel.fillRect(x,y,60,5);
         pincel.fillRect(x+70,y,60,5);
@@ -181,7 +181,7 @@ function ahorcado(){
         }
     }
 
-    if(vidas==1){
+    if(vidas==1){ //GAME OVER
         piernai.src = "img/piernai.png"
         piernai.alt = "pierna izquierda"
         piernai.onload = function(){
@@ -208,12 +208,6 @@ document.addEventListener("keydown", (event) => {
         
         check(palabraSecreta, tecla);
 
-         if (win == palabraSecreta.length){
-            pincel.fillStyle="green";
-             pincel.font="bold 72px Poppins";
-             pincel.fillText('GANASTE',530,250,800)
-             ongame=false;
-         }
 }
 })
 
@@ -231,6 +225,14 @@ function check(texto, tecla){
                 flag = true;
             }
         }
+
+        
+        if (win == palabraSecreta.length){
+            pincel.fillStyle="green";
+             pincel.font="bold 72px Poppins";
+             pincel.fillText('GANASTE',530,250,800)
+             ongame=false;
+         }
 
         if(flag == false){  
             pincel.fillStyle = "red";
@@ -254,7 +256,7 @@ function addPalabra(x,y){
     
     pincel.fillStyle = "darkblue"
     pincel.font="bold 48px Poppins"
-    if(palabraSecreta.length < 6){
+    if(palabraSecreta.length <= 6){
         pincel.fillText(x,520+(80*y),390)
     }
     if(palabraSecreta.length > 6){
