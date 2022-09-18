@@ -1,5 +1,5 @@
 'use strict'
-const palabras = ["PLATO","HELADERA","MESA","SILLON","MAPA","RAMA","MAR","OLEO","RAMPA","ALURA"]; // Palabras a adivinar
+const palabras = ["PLATO","UVA","MESA","SILLON","MAPA","RAMA","MAR","OLEO","RAMPA","ALURA"]; // Palabras a adivinar
 const letrasIncluidas = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z'] //listado de caracteres que se pueden usar
 var letrasUsadas = []; //letras que va usando el usuario
 var pantalla = document.querySelector("canvas");
